@@ -1,136 +1,164 @@
 ## Models content has to be copied from source.yml to schema.yml
 version: 2
 
-models:  
-  - name: Property
-    columns:
-      - name: description
-      - name: zipcode
-      - name: address2
-      - name: taxrateid
-      - name: city
-      - name: address1
-      - name: subdivision
-      - name: communitypool
-      - name: name
-      - name: archived
-      - name: neighborhood
-      - name: area
-      - name: unitid
-      - name: ownerid
-      - name: state
-      - name: thumbnailimage
-      - name: checkinday
-      - name: phonenumber
-      - name: checkinoffice
-      - name: communitytennis
-      - name: unitnumber
-      - name: browselocation
-      - name: location
-      - name: webavailable
-      - name: _airbyte_ab_id
-      - name: _airbyte_emitted_at
-      - name: _airbyte_normalized_at
-      - name: _airbyte_property_hashid
+sources:
+  - name: airbyte_bq_test_srandle2
+    tables:
+      - name: _airbyte_raw_dtproperties
+      - name: _airbyte_raw_mssubscription_agents
+      - name: _airbyte_raw_property
+      - name: _airbyte_raw_propertyamenities
+      - name: _airbyte_raw_tblguest
+      - name: _airbyte_raw_tblowner
+      - name: _airbyte_raw_tblunit
+      - name: _airbyte_raw_tblunitamenities
+      - name: _airbyte_raw_tblunitmaintinfo
+      - name: _airbyte_raw_tblunitreservations
+      - name: dtproperties
+      - name: mssubscription_agents
+      - name: my_first_dbt_model
+      - name: my_second_dbt_model
+      - name: Property
+      - name: propertyamenities
+      - name: tblguest
+      - name: tblowner
+      - name: tblunit
+      - name: tblunitamenities
+      - name: tblunitmaintinfo
+      - name: tblunitreservations
+      
+# sources:
+#   - name: airbyte_bq_test_srandle2
+#     tables: 
+#       - name: Property
+#         columns:
+#           - name: description
+#           - name: zipcode
+#           - name: address2
+#           - name: taxrateid
+#           - name: city
+#           - name: address1
+#           - name: subdivision
+#           - name: communitypool
+#           - name: name
+#           - name: archived
+#           - name: neighborhood
+#           - name: area
+#           - name: unitid
+#           - name: ownerid
+#           - name: state
+#           - name: thumbnailimage
+#           - name: checkinday
+#           - name: phonenumber
+#           - name: checkinoffice
+#           - name: communitytennis
+#           - name: unitnumber
+#           - name: browselocation
+#           - name: location
+#           - name: webavailable
+#           - name: _airbyte_ab_id
+#           - name: _airbyte_emitted_at
+#           - name: _airbyte_normalized_at
+#           - name: _airbyte_property_hashid
 
-  - name: propertyamenities
-    columns:
-      - name: cabletv
-      - name: wireless
-      - name: newconstructionproject
-      - name: pooltable
-      - name: internetdsl
-      - name: airhockey
-      - name: poolsidecabana
-      - name: arcadegame
-      - name: masterbedrooms
-      - name: privatepooldates
-      - name: militarydiscount
-      - name: full
-      - name: baths
-      - name: minrate
-      - name: futon
-      - name: computer
-      - name: nospecialevents
-      - name: dunedeck
-      - name: handicapfriendly
-      - name: daybed
-      - name: trundles
-      - name: theaterroom
-      - name: keylessentry
-      - name: doublesleepsofas
-      - name: heatedpool
-      - name: bumperpool
-      - name: doublebunksets
-      - name: hpcostguest
-      - name: beds
-      - name: internetaccess
-      - name: watertreatmentsystem
-      - name: bedrooms
-      - name: gatedpool
-      - name: petsallowed
-      - name: highchair
-      - name: walkwaytobeach
-      - name: distancetobeach
-      - name: hottub
-      - name: nosmoking
-      - name: unitnumber
-      - name: twins
-      - name: portacrib
-      - name: privatewell
-      - name: specialeventsfee
-      - name: linencharge
-      - name: maxrate
-      - name: crib
-      - name: fireplacegas
-      - name: packnplay
-      - name: basketball
-      - name: kings
-      - name: municipalwater
-      - name: holidays
-      - name: specialevents
-      - name: pagenumber
-      - name: elevator
-      - name: internetsatellite
-      - name: wetbar
-      - name: maxoccupancy
-      - name: screenedporch
-      - name: rentalsbookpagenumber
-      - name: towels
-      - name: queensleepsofas
-      - name: heatedpooldate
-      - name: foosball
-      - name: antenna
-      - name: bbqcharcoal
-      - name: satellitetv
-      - name: whirlpooltub
-      - name: hptypepropane
-      - name: volleyballset
-      - name: specialeventsdeposit
-      - name: heatedpoolfee
-      - name: bunksets
-      - name: hpcostincluded
-      - name: newconstruction
-      - name: playpen
-      - name: fireplacewood
-      - name: parking
-      - name: poolsize
-      - name: bbqgas
-      - name: internetcable
-      - name: queens
-      - name: linens
-      - name: privatepool
-      - name: year
-      - name: unitid
-      - name: duos
-      - name: hptypeheatpump
-      - name: pingpong
-      - name: traditional
-      - name: sleepsofas
-      - name: fax
-      - name: icemaker
-      - name: fourwheeldrive
-      - name: _airbyte_ab_id
-      - name: _airbyte_emitted_at
-      - name: _airbyte_normalized_at
-      - name: _airbyte_propertyamenities_hashid
+      # - name: PropertyAmenities
+      #   columns:
+      #     - name: cabletv
+      #     - name: wireless
+      #     - name: newconstructionproject
+      #     - name: pooltable
+      #     - name: internetdsl
+      #     - name: airhockey
+      #     - name: poolsidecabana
+      #     - name: arcadegame
+      #     - name: masterbedrooms
+      #     - name: privatepooldates
+      #     - name: militarydiscount
+      #     - name: full
+      #     - name: baths
+      #     - name: minrate
+      #     - name: futon
+      #     - name: computer
+      #     - name: nospecialevents
+      #     - name: dunedeck
+      #     - name: handicapfriendly
+      #     - name: daybed
+      #     - name: trundles
+      #     - name: theaterroom
+      #     - name: keylessentry
+      #     - name: doublesleepsofas
+      #     - name: heatedpool
+      #     - name: bumperpool
+      #     - name: doublebunksets
+      #     - name: hpcostguest
+      #     - name: beds
+      #     - name: internetaccess
+      #     - name: watertreatmentsystem
+      #     - name: bedrooms
+      #     - name: gatedpool
+      #     - name: petsallowed
+      #     - name: highchair
+      #     - name: walkwaytobeach
+      #     - name: distancetobeach
+      #     - name: hottub
+      #     - name: nosmoking
+      #     - name: unitnumber
+      #     - name: twins
+      #     - name: portacrib
+      #     - name: privatewell
+      #     - name: specialeventsfee
+      #     - name: linencharge
+      #     - name: maxrate
+      #     - name: crib
+      #     - name: fireplacegas
+      #     - name: packnplay
+      #     - name: basketball
+      #     - name: kings
+      #     - name: municipalwater
+      #     - name: holidays
+      #     - name: specialevents
+      #     - name: pagenumber
+      #     - name: elevator
+      #     - name: internetsatellite
+      #     - name: wetbar
+      #     - name: maxoccupancy
+      #     - name: screenedporch
+      #     - name: rentalsbookpagenumber
+      #     - name: towels
+      #     - name: queensleepsofas
+      #     - name: heatedpooldate
+      #     - name: foosball
+      #     - name: antenna
+      #     - name: bbqcharcoal
+      #     - name: satellitetv
+      #     - name: whirlpooltub
+      #     - name: hptypepropane
+      #     - name: volleyballset
+      #     - name: specialeventsdeposit
+      #     - name: heatedpoolfee
+      #     - name: bunksets
+      #     - name: hpcostincluded
+      #     - name: newconstruction
+      #     - name: playpen
+      #     - name: fireplacewood
+      #     - name: parking
+      #     - name: poolsize
+      #     - name: bbqgas
+      #     - name: internetcable
+      #     - name: queens
+      #     - name: linens
+      #     - name: privatepool
+      #     - name: year
+      #     - name: unitid
+      #     - name: duos
+      #     - name: hptypeheatpump
+      #     - name: pingpong
+      #     - name: traditional
+      #     - name: sleepsofas
+      #     - name: fax
+      #     - name: icemaker
+      #     - name: fourwheeldrive
+      #     - name: _airbyte_ab_id
+      #     - name: _airbyte_emitted_at
+      #     - name: _airbyte_normalized_at
+      #     - name: _airbyte_propertyamenities_hashid
