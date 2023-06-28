@@ -35,7 +35,7 @@ sources:
           - name: _airbyte_normalized_at
           - name: _airbyte_property_hashid
 
-      - name: propertyamenities
+      - name: PropertyAmenities
         columns:
           - name: cabletv
           - name: wireless

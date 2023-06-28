@@ -1,33 +1,33 @@
-## Models content has to be copied from source.yml to schema.yml
-version: 2
+# ## Models content has to be copied from source.yml to schema.yml
+# version: 2
 
-sources:
-  - name: airbyte_bq_test_srandle2
-    tables:
-      - name: _airbyte_raw_dtproperties
-      - name: _airbyte_raw_mssubscription_agents
-      - name: _airbyte_raw_property
-      - name: _airbyte_raw_propertyamenities
-      - name: _airbyte_raw_tblguest
-      - name: _airbyte_raw_tblowner
-      - name: _airbyte_raw_tblunit
-      - name: _airbyte_raw_tblunitamenities
-      - name: _airbyte_raw_tblunitmaintinfo
-      - name: _airbyte_raw_tblunitreservations
-      - name: dtproperties
-      - name: mssubscription_agents
-      - name: my_first_dbt_model
-      - name: my_second_dbt_model
-      - name: Property
-      - name: propertyamenities
-      - name: tblguest
-      - name: tblowner
-      - name: tblunit
-      - name: tblunitamenities
-      - name: tblunitmaintinfo
-      - name: tblunitreservations
-      
 # sources:
+#   - name: airbyte_bq_test_srandle2
+#     tables:
+#       - name: _airbyte_raw_dtproperties
+#       - name: _airbyte_raw_mssubscription_agents
+#       - name: _airbyte_raw_property
+#       - name: _airbyte_raw_propertyamenities
+#       - name: _airbyte_raw_tblguest
+#       - name: _airbyte_raw_tblowner
+#       - name: _airbyte_raw_tblunit
+#       - name: _airbyte_raw_tblunitamenities
+#       - name: _airbyte_raw_tblunitmaintinfo
+#       - name: _airbyte_raw_tblunitreservations
+#       - name: dtproperties
+#       - name: mssubscription_agents
+#       - name: my_first_dbt_model
+#       - name: my_second_dbt_model
+#       - name: Property
+#       - name: PropertyAmenities
+#       - name: tblguest
+#       - name: tblowner
+#       - name: tblunit
+#       - name: tblunitamenities
+#       - name: tblunitmaintinfo
+#       - name: tblunitreservations
+      
+# # sources:
 #   - name: airbyte_bq_test_srandle2
 #     tables: 
 #       - name: Property
