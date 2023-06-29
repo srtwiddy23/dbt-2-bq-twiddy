@@ -4,18 +4,18 @@ with source as (
 
 renamed as (
     select 
-        unitID UnitID,
-        ifnull(WeeklyRate,0) weeklyRate,
+        unitID,
+        weeklyRate,
         DATEDIFF(SECOND, '1970-01-01',RateArrive) rateArrive,
         DATEDIFF(SECOND, '1970-01-01',RateDepart) rateDepart,
         CASE WHEN ReservationArrive IS NULL THEN NULL ELSE DATEDIFF(SECOND, '1970-01-01', ReservationArrive) END reservationArrive,
         CASE WHEN ReservationDepart IS NULL THEN NULL ELSE DATEDIFF(SECOND, '1970-01-01', ReservationDepart) END reservationDepart,
         CASE WHEN DateReserved IS NULL THEN NULL ELSE DATEDIFF(SECOND, '1970-01-01', DateReserved) END dateReserved,
-        ifnull(ReservationTypeID,0) reservationTypeID,
-        IsAvailable isAvailable,
-        ifnull(OwnerApprovedPrice,0) ownerApprovedPrice,
-        ifnull(DollarDiscount,0) dollarDiscount,
-        ifnull(PercentDiscount,0) percentDiscount
+        reservationTypeID,
+        isAvailable,
+        ownerApprovedPrice,
+        dollarDiscount,
+        percentDiscount
     
     from source
 

@@ -18,10 +18,10 @@ renamed as (
         browselocation,
         location,
         webavailable,
-        _airbyte_ab_id,
-        _airbyte_emitted_at,
-        _airbyte_normalized_at,
-        _airbyte_property_hashid
+        thumbnailimage,
+        area,
+        checkinday,
+        checkinoffice
 
     from source
 

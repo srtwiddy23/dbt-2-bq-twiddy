@@ -4,9 +4,9 @@ with source as (
 
 renamed as (
     select 
-        UnitID unitID,
-        UnitNumber unitNumber,
-        Url url
+        unitID,
+        unitNumber,
+        url
     from source
 
 )

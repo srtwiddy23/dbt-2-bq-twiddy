@@ -40,8 +40,7 @@ renamed as (
             ON THIAP.lPerson_id = TUR.lUnitReservations_id 
             AND THIAP.lUserFieldHeadingsList_id = 60 
             AND THIAP.boolDeleted_fl = 0 
-        where 
-            TUR.boolDeleted_fl = 0  
+        where TUR.boolDeleted_fl = 0  
             AND TUR.sConfirmation_no IS NOT NULL  
         group by 
             TUR.lUnitReservations_id, 
